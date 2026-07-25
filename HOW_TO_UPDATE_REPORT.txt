@@ -1,0 +1,26 @@
+# How to Update the Rental Income Report
+
+When new monthly financial statement PDFs arrive in this folder:
+
+## Quick Trigger (Option A)
+Simply tell QClaw:
+
+> "Update the rental income report"
+
+or
+
+> "New monthly reports are in the mana mana folder"
+
+QClaw will automatically:
+1. Scan this folder for new PDFs
+2. Extract all financial data from each statement
+3. Update tables, charts, KPIs, and insights in the HTML report
+4. Rename the file if the date range has changed
+
+## Output File
+`Rental_Income_Report_Jan-May_2026.html`
+(renamed accordingly when new months are added)
+
+---
+
+Last updated: 11 July 2026
