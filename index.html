@@ -22,6 +22,19 @@
   body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height:1.6; }
   .container { max-width:1300px; margin:0 auto; padding:24px 20px; }
 
+  /* ── Password Gate ── */
+  #pw-gate { position:fixed; inset:0; z-index:9999; background:linear-gradient(135deg,#1a1a2e,#0f3460); display:flex; align-items:center; justify-content:center; }
+  #pw-gate .card { background:#fff; border-radius:16px; padding:40px 36px; width:100%; max-width:400px; box-shadow:0 8px 40px rgba(0,0,0,0.3); text-align:center; }
+  #pw-gate h2 { color:var(--primary); margin-bottom:8px; font-size:1.2rem; }
+  #pw-gate .sub  { color:var(--text-light); font-size:0.85rem; margin-bottom:24px; }
+  #pw-gate input[type=password] { width:100%; padding:14px 16px; border:2px solid var(--border); border-radius:10px; font-size:1.1rem; text-align:center; letter-spacing:0.12em; outline:none; transition:border-color 0.2s; }
+  #pw-gate input[type=password]:focus { border-color:var(--accent); }
+  #pw-gate .btn { width:100%; padding:14px; margin-top:16px; background:var(--accent); color:#fff; border:none; border-radius:10px; font-size:1rem; font-weight:600; cursor:pointer; transition:background 0.2s; }
+  #pw-gate .btn:hover { background:#2980b9; }
+  #pw-gate .err { color:var(--danger); font-size:0.82rem; margin-top:12px; display:none; }
+  #pw-gate .err.show { display:block; }
+  #report { display:none; }
+
   /* Header */
   .header {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
@@ -106,7 +119,18 @@
 </style>
 </head>
 <body>
-<div class="container">
+<!-- ═══════════════ Password Gate ═══════════════ -->
+<div id="pw-gate">
+  <div class="card">
+    <h2>🔒 Restricted Access</h2>
+    <div class="sub">Enter password to view the rental income report</div>
+    <input type="password" id="pw-input" placeholder="Password" autocomplete="off" />
+    <button class="btn" id="pw-btn">Unlock</button>
+    <div class="err" id="pw-err">Incorrect password. Please try again.</div>
+  </div>
+</div>
+
+<div class="container" id="report">
 
 <!-- ============ HEADER ============ -->
 <div class="header">
@@ -542,5 +566,44 @@
 </div>
 
 </div>
+
+<!-- ═══════════════ Password Script ═══════════════ -->
+<script>
+(function(){
+  var PASS = '22mac';
+  var gate = document.getElementById('pw-gate');
+  var report = document.getElementById('report');
+  var input = document.getElementById('pw-input');
+  var btn   = document.getElementById('pw-btn');
+  var err   = document.getElementById('pw-err');
+
+  // check sessionStorage (persists within same tab session)
+  if (sessionStorage.getItem('_pw_ok') === '1') {
+    gate.style.display = 'none';
+    report.style.display = 'block';
+  }
+
+  function unlock() {
+    if (input.value === PASS) {
+      sessionStorage.setItem('_pw_ok','1');
+      gate.style.display = 'none';
+      report.style.display = 'block';
+      err.classList.remove('show');
+    } else {
+      err.classList.add('show');
+      input.value = '';
+      input.focus();
+    }
+  }
+
+  btn.addEventListener('click', unlock);
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') unlock();
+  });
+
+  // focus input on load
+  input.focus();
+})();
+</script>
 </body>
 </html>
