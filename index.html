@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>22 Macalisterz — Rental Income Report (Jan–Jun 2026)</title>
+<title>22 Macalisterz — Rental Income Report (Jan–Jul 2026)</title>
 <style>
   :root {
     --bg: #f5f6fa;
@@ -86,20 +86,20 @@
   .highlight   { background:#fffbe6 !important; }
 
   /* Chart bars */
-  .bar-chart { display:flex; gap:24px; padding:0; position:relative; flex:1; }
+  .bar-chart { display:flex; gap:16px; padding:0; position:relative; flex:1; }
   .bar-chart.has-baseline { padding:4px 0 34px; }
   .bar-chart.has-baseline::before {
     content:''; position:absolute; bottom:30px; left:0; right:0; height:1px;
     background:var(--border); z-index:0;
   }
-  .bar-col { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; min-width:56px; position:relative; z-index:1; }
-  .bar-group { display:flex; align-items:flex-end; justify-content:center; gap:4px; width:100%; }
-  .bar { width:20px; border-radius:5px 5px 0 0; transition:all 0.3s; min-height:4px; align-self:end; }
+  .bar-col { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; min-width:48px; position:relative; z-index:1; }
+  .bar-group { display:flex; align-items:flex-end; justify-content:center; gap:3px; width:100%; }
+  .bar { width:14px; border-radius:4px 4px 0 0; transition:all 0.3s; min-height:3px; align-self:end; }
   .bar.revenue { background:linear-gradient(180deg,var(--accent),#2980b9); }
   .bar.profit  { background:linear-gradient(180deg,var(--accent2),#27ae60); }
   .bar.entitle { background:linear-gradient(180deg,#8e44ad,#6c3483); }
-  .bar-label { font-size:0.72rem; font-weight:600; color:var(--text); margin-top:6px; text-align:center; }
-  .bar-value { font-size:0.68rem; color:var(--text-light); }
+  .bar-label { font-size:0.7rem; font-weight:600; color:var(--text); margin-top:6px; text-align:center; }
+  .bar-value { font-size:0.65rem; color:var(--text-light); }
 
   /* Legend */
   .legend { display:flex; gap:24px; flex-wrap:wrap; margin-bottom:12px; }
@@ -113,8 +113,8 @@
     .header h1 { font-size:1.4rem; }
     .kpi-grid { grid-template-columns:1fr 1fr; }
     table { font-size:0.72rem; }
-    .bar-chart { gap:14px; }
-    .bar { width:14px; }
+    .bar-chart { gap:10px; }
+    .bar { width:10px; }
   }
 </style>
 </head>
@@ -135,7 +135,7 @@
 <!-- ============ HEADER ============ -->
 <div class="header">
   <h1>🏢 22 Macalisterz — Rental Income Report</h1>
-  <div class="subtitle">Monthly Financial Summary · January – June 2026</div>
+  <div class="subtitle">Monthly Financial Summary · January – July 2026</div>
   <div class="meta-row">
     <div class="meta-item">
       <span class="meta-label">Unit</span>
@@ -160,27 +160,27 @@
 <div class="kpi-grid">
   <div class="kpi blue">
     <div class="label">Total Revenue (100%)</div>
-    <div class="value">RM 30,671.84</div>
-    <div class="sub">6 months · Short-term rental</div>
+    <div class="value">RM 36,300.13</div>
+    <div class="sub">7 months · Short-term rental</div>
   </div>
   <div class="kpi green">
     <div class="label">Gross Revenue (80%)</div>
-    <div class="value">RM 24,594.96</div>
+    <div class="value">RM 29,120.64</div>
     <div class="sub">After direct expenses</div>
   </div>
   <div class="kpi green">
     <div class="label">Total Net Profit</div>
-    <div class="value">RM 18,740.68</div>
+    <div class="value">RM 22,132.09</div>
     <div class="sub">After all operating expenses</div>
   </div>
   <div class="kpi orange">
     <div class="label">Total MO Charges</div>
-    <div class="value">RM 748.38</div>
+    <div class="value">RM 881.94</div>
     <div class="sub">Maintenance, Sinking, Insurance, etc.</div>
   </div>
   <div class="kpi green">
     <div class="label">Owner's Entitlement</div>
-    <div class="value">RM 17,992.30</div>
+    <div class="value">RM 21,249.95</div>
     <div class="sub">Final payout (net of all deductions)</div>
   </div>
 </div>
@@ -194,17 +194,17 @@
     <div class="legend-item"><span class="legend-dot" style="background:#8e44ad"></span> Owner's Entitlement</div>
   </div>
   <div class="bar-chart has-baseline" style="height:270px">
-    <!-- Jan: Revenue 5635, Profit 3593, Entitle 3325 -->
+    <!-- Jan: Revenue 5635 -->
     <div class="bar-col">
       <div class="bar-group">
         <div class="bar revenue" style="height:200px" title="Revenue: RM 5,635"></div>
-        <div class="bar profit"  style="height:128px" title="Net Profit: RM 3,593"></div>
+        <div class="bar profit"  style="height:127px" title="Net Profit: RM 3,593"></div>
         <div class="bar entitle" style="height:118px" title="Entitlement: RM 3,325"></div>
       </div>
       <div class="bar-label">Jan</div>
       <div class="bar-value">RM 5,635</div>
     </div>
-    <!-- Feb: Revenue 5398, Profit 3370, Entitle 3236 -->
+    <!-- Feb: Revenue 5398 -->
     <div class="bar-col">
       <div class="bar-group">
         <div class="bar revenue" style="height:192px" title="Revenue: RM 5,398"></div>
@@ -214,7 +214,7 @@
       <div class="bar-label">Feb</div>
       <div class="bar-value">RM 5,398</div>
     </div>
-    <!-- Mar: Revenue 5262, Profit 3100, Entitle 3072 -->
+    <!-- Mar: Revenue 5262 -->
     <div class="bar-col">
       <div class="bar-group">
         <div class="bar revenue" style="height:187px" title="Revenue: RM 5,262"></div>
@@ -224,7 +224,7 @@
       <div class="bar-label">Mar</div>
       <div class="bar-value">RM 5,262</div>
     </div>
-    <!-- Apr: Revenue 4671, Profit 2834, Entitle 2793 -->
+    <!-- Apr: Revenue 4671 -->
     <div class="bar-col">
       <div class="bar-group">
         <div class="bar revenue" style="height:166px" title="Revenue: RM 4,671"></div>
@@ -234,7 +234,7 @@
       <div class="bar-label">Apr</div>
       <div class="bar-value">RM 4,671</div>
     </div>
-    <!-- May: Revenue 4823, Profit 2901, Entitle 2777 -->
+    <!-- May: Revenue 4823 -->
     <div class="bar-col">
       <div class="bar-group">
         <div class="bar revenue" style="height:171px" title="Revenue: RM 4,823"></div>
@@ -244,15 +244,25 @@
       <div class="bar-label">May</div>
       <div class="bar-value">RM 4,823</div>
     </div>
-    <!-- Jun: Revenue 4883, Profit 2944, Entitle 2789 -->
+    <!-- Jun: Revenue 4883 -->
     <div class="bar-col">
       <div class="bar-group">
         <div class="bar revenue" style="height:173px" title="Revenue: RM 4,883"></div>
-        <div class="bar profit"  style="height:105px" title="Net Profit: RM 2,944"></div>
+        <div class="bar profit"  style="height:104px" title="Net Profit: RM 2,944"></div>
         <div class="bar entitle" style="height:99px" title="Entitlement: RM 2,789"></div>
       </div>
       <div class="bar-label">Jun</div>
       <div class="bar-value">RM 4,883</div>
+    </div>
+    <!-- Jul: Revenue 5628 -->
+    <div class="bar-col">
+      <div class="bar-group">
+        <div class="bar revenue" style="height:200px" title="Revenue: RM 5,628"></div>
+        <div class="bar profit"  style="height:120px" title="Net Profit: RM 3,391"></div>
+        <div class="bar entitle" style="height:116px" title="Entitlement: RM 3,258"></div>
+      </div>
+      <div class="bar-label">Jul</div>
+      <div class="bar-value">RM 5,628</div>
     </div>
   </div>
   <p style="font-size:0.78rem;color:var(--text-light);margin-top:4px;text-align:center">Bar heights proportional (Jan Revenue = RM 5,635 = 200px base). Hover over bars for exact values.</p>
@@ -265,49 +275,49 @@
     <thead>
       <tr>
         <th>Item</th>
-        <th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th>
+        <th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th>
         <th>Total</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Short Term Rental</td>
-        <td>5,635.34</td><td>5,397.84</td><td>5,261.58</td><td>4,671.22</td><td>4,822.54</td><td>4,883.32</td>
-        <td><strong>30,671.84</strong></td>
+        <td>5,635.34</td><td>5,397.84</td><td>5,261.58</td><td>4,671.22</td><td>4,822.54</td><td>4,883.32</td><td>5,628.29</td>
+        <td><strong>36,300.13</strong></td>
       </tr>
       <tr class="row-subtotal">
         <td>Total Collected Revenue</td>
-        <td>5,635.34</td><td>5,397.84</td><td>5,261.58</td><td>4,671.22</td><td>4,822.54</td><td>4,883.32</td>
-        <td><strong>30,671.84</strong></td>
+        <td>5,635.34</td><td>5,397.84</td><td>5,261.58</td><td>4,671.22</td><td>4,822.54</td><td>4,883.32</td><td>5,628.29</td>
+        <td><strong>36,300.13</strong></td>
       </tr>
-      <tr><td colspan="8" style="padding:3px;background:var(--border)"></td></tr>
+      <tr><td colspan="9" style="padding:3px;background:var(--border)"></td></tr>
       <tr>
         <td style="color:var(--danger)">(−) Credit Card / E-Payment</td>
-        <td>266.80</td><td>1.72</td><td>3.37</td><td>3.65</td><td>3.02</td><td>1.67</td>
-        <td>280.23</td>
+        <td>266.80</td><td>1.72</td><td>3.37</td><td>3.65</td><td>3.02</td><td>1.67</td><td>3.86</td>
+        <td>284.09</td>
       </tr>
       <tr>
         <td style="color:var(--danger)">(−) Commission</td>
-        <td>233.32</td><td>385.42</td><td>356.94</td><td>403.34</td><td>400.64</td><td>368.25</td>
-        <td>2,147.91</td>
+        <td>233.32</td><td>385.42</td><td>356.94</td><td>403.34</td><td>400.64</td><td>368.25</td><td>576.40</td>
+        <td>2,724.31</td>
       </tr>
       <tr class="row-subtotal">
         <td style="color:var(--danger)">Total Direct Expenses</td>
-        <td>500.12</td><td>387.14</td><td>360.31</td><td>406.99</td><td>403.66</td><td>369.92</td>
-        <td><strong>2,428.14</strong></td>
+        <td>500.12</td><td>387.14</td><td>360.31</td><td>406.99</td><td>403.66</td><td>369.92</td><td>580.26</td>
+        <td><strong>3,008.40</strong></td>
       </tr>
-      <tr><td colspan="8" style="padding:3px;background:var(--border)"></td></tr>
+      <tr><td colspan="9" style="padding:3px;background:var(--border)"></td></tr>
       <tr class="row-subtotal">
         <td>Collected Revenue (100%)</td>
-        <td>5,135.22</td><td>5,010.70</td><td>4,901.27</td><td>4,264.23</td><td>4,418.88</td><td>4,513.40</td>
-        <td><strong>28,243.70</strong></td>
+        <td>5,135.22</td><td>5,010.70</td><td>4,901.27</td><td>4,264.23</td><td>4,418.88</td><td>4,513.40</td><td>5,048.03</td>
+        <td><strong>33,291.73</strong></td>
       </tr>
       <tr style="font-weight:700;background:#e8f5e9">
         <td>Gross Revenue (80%)</td>
-        <td>4,108.18</td><td>4,008.56</td><td>3,921.02</td><td>3,411.38</td><td>3,535.10</td><td>3,610.72</td>
-        <td><strong>24,594.96</strong></td>
+        <td>4,108.18</td><td>4,008.56</td><td>3,921.02</td><td>3,411.38</td><td>3,535.10</td><td>3,610.72</td><td>4,038.42</td>
+        <td><strong>29,120.64</strong></td>
       </tr>
-      <tr><td colspan="8" style="padding:3px;background:var(--border)"></td></tr>
+      <tr><td colspan="9" style="padding:3px;background:var(--border)"></td></tr>
       <tr style="background:#f0f8ff">
         <td>📊 Occupancy Rate</td>
         <td>82.1% <span style="font-size:0.7rem;color:var(--text-light)">(891/1085)</span></td>
@@ -316,17 +326,18 @@
         <td>80.8% <span style="font-size:0.7rem;color:var(--text-light)">(921/1140)</span></td>
         <td>80.8% <span style="font-size:0.7rem;color:var(--text-light)">(952/1178)</span></td>
         <td>90.5% <span style="font-size:0.7rem;color:var(--text-light)">(1023/1131)</span></td>
+        <td>96.3% <span style="font-size:0.7rem;color:var(--text-light)">(1015/1054)</span></td>
         <td><strong>—</strong></td>
       </tr>
       <tr style="background:#f5f0ff">
         <td>💰 Avg Room Rate</td>
-        <td>RM 212.59</td><td>RM 207.27</td><td>RM 210.05</td><td>RM 192.73</td><td>RM 192.25</td><td>RM 178.71</td>
+        <td>RM 212.59</td><td>RM 207.27</td><td>RM 210.05</td><td>RM 192.73</td><td>RM 192.25</td><td>RM 178.71</td><td>RM 188.53</td>
         <td><strong>—</strong></td>
       </tr>
       <tr style="background:#fffef0">
         <td>🏠 Total Hosted Trips</td>
-        <td>891</td><td>1,064</td><td>1,027</td><td>921</td><td>952</td><td>1,023</td>
-        <td><strong>5,878</strong></td>
+        <td>891</td><td>1,064</td><td>1,027</td><td>921</td><td>952</td><td>1,023</td><td>1,015</td>
+        <td><strong>6,893</strong></td>
       </tr>
     </tbody>
   </table>
@@ -352,6 +363,7 @@
         <div class="bar-col"><div class="bar-group"><div class="bar revenue" style="height:162px" title="80.8%"></div></div><div class="bar-label">Apr</div><div class="bar-value">80.8%</div></div>
         <div class="bar-col"><div class="bar-group"><div class="bar revenue" style="height:162px" title="80.8%"></div></div><div class="bar-label">May</div><div class="bar-value">80.8%</div></div>
         <div class="bar-col"><div class="bar-group"><div class="bar revenue" style="height:181px" title="90.5%"></div></div><div class="bar-label">Jun</div><div class="bar-value">90.5%</div></div>
+        <div class="bar-col"><div class="bar-group"><div class="bar revenue" style="height:193px" title="96.3%"></div></div><div class="bar-label">Jul</div><div class="bar-value">96.3%</div></div>
       </div>
     </div>
     <!-- Divider -->
@@ -368,11 +380,12 @@
         <div class="bar-col"><div class="bar-group"><div class="bar profit" style="height:175px" title="RM 192.73"></div></div><div class="bar-label">Apr</div><div class="bar-value">RM 193</div></div>
         <div class="bar-col"><div class="bar-group"><div class="bar profit" style="height:175px" title="RM 192.25"></div></div><div class="bar-label">May</div><div class="bar-value">RM 192</div></div>
         <div class="bar-col"><div class="bar-group"><div class="bar profit" style="height:162px" title="RM 178.71"></div></div><div class="bar-label">Jun</div><div class="bar-value">RM 179</div></div>
+        <div class="bar-col"><div class="bar-group"><div class="bar profit" style="height:171px" title="RM 188.53"></div></div><div class="bar-label">Jul</div><div class="bar-value">RM 189</div></div>
       </div>
     </div>
   </div>
   <p style="font-size:0.78rem;color:var(--text-light);margin-top:12px;text-align:center">
-    🔑 <strong>Insight:</strong> Occupancy rebounded to 90.5% in June (up from ~81% in Mar–May), but at a lower average room rate of RM 179 — the lowest rate this year, suggesting price cuts drove the volume recovery.
+    🔑 <strong>Insight:</strong> July hit the highest occupancy of the year at 96.3%, and the average room rate recovered to RM 189 (up from RM 179 in June). Revenue rebounded strongly to RM 5,628 — matching January's level.
   </p>
 </div>
 
@@ -382,45 +395,45 @@
   <table>
     <thead>
       <tr>
-        <th>Expense Item</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th>
+        <th>Expense Item</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th>
         <th>Total</th><th>Avg/Mo</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Electricity</td>
-        <td>73.80</td><td>108.71</td><td>148.59</td><td>131.49</td><td>137.97</td><td>153.26</td>
-        <td><strong>753.82</strong></td><td>125.64</td>
+        <td>73.80</td><td>108.71</td><td>148.59</td><td>131.49</td><td>137.97</td><td>153.26</td><td>133.89</td>
+        <td><strong>887.71</strong></td><td>126.82</td>
       </tr>
       <tr>
         <td>Water</td>
-        <td>29.58</td><td>31.51</td><td>37.86</td><td>20.32</td><td>31.74</td><td>31.59</td>
-        <td><strong>182.60</strong></td><td>30.43</td>
+        <td>29.58</td><td>31.51</td><td>37.86</td><td>20.32</td><td>31.74</td><td>31.59</td><td>27.19</td>
+        <td><strong>209.79</strong></td><td>29.97</td>
       </tr>
       <tr>
         <td>Internet</td>
-        <td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.48</td><td>0.00</td>
-        <td><strong>0.48</strong></td><td>0.08</td>
+        <td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.48</td><td>0.00</td><td>0.00</td>
+        <td><strong>0.48</strong></td><td>0.07</td>
       </tr>
       <tr>
         <td>Repair & Maintenance</td>
-        <td>0.00</td><td>0.00</td><td>1.42</td><td>0.55</td><td>4.36</td><td>4.29</td>
-        <td><strong>10.62</strong></td><td>1.77</td>
+        <td>0.00</td><td>0.00</td><td>1.42</td><td>0.55</td><td>4.36</td><td>4.29</td><td>1.57</td>
+        <td><strong>12.19</strong></td><td>1.74</td>
       </tr>
       <tr style="background:#fffbe6">
         <td>Room Cleaning</td>
-        <td>368.91</td><td>453.29</td><td>602.96</td><td>425.49</td><td>417.45</td><td>434.52</td>
-        <td><strong>2,702.62</strong></td><td>450.44</td>
+        <td>368.91</td><td>453.29</td><td>602.96</td><td>425.49</td><td>417.45</td><td>434.52</td><td>439.36</td>
+        <td><strong>3,141.98</strong></td><td>448.85</td>
       </tr>
       <tr>
         <td>Room's Amenities</td>
-        <td>43.30</td><td>45.00</td><td>30.00</td><td>0.00</td><td>42.35</td><td>43.49</td>
-        <td><strong>204.14</strong></td><td>34.02</td>
+        <td>43.30</td><td>45.00</td><td>30.00</td><td>0.00</td><td>42.35</td><td>43.49</td><td>45.00</td>
+        <td><strong>249.14</strong></td><td>35.59</td>
       </tr>
       <tr class="row-total">
         <td>Total Operating Expenses</td>
-        <td>515.59</td><td>638.51</td><td>820.83</td><td>577.85</td><td>634.35</td><td>667.15</td>
-        <td><strong>3,854.28</strong></td><td>642.38</td>
+        <td>515.59</td><td>638.51</td><td>820.83</td><td>577.85</td><td>634.35</td><td>667.15</td><td>647.01</td>
+        <td><strong>4,501.29</strong></td><td>643.04</td>
       </tr>
     </tbody>
   </table>
@@ -432,42 +445,42 @@
   <table>
     <thead>
       <tr>
-        <th>Line Item</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th>
+        <th>Line Item</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th>
         <th>Total</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Gross Revenue (80%)</td>
-        <td>4,108.18</td><td>4,008.56</td><td>3,921.02</td><td>3,411.38</td><td>3,535.10</td><td>3,610.72</td>
-        <td><strong>24,594.96</strong></td>
+        <td>4,108.18</td><td>4,008.56</td><td>3,921.02</td><td>3,411.38</td><td>3,535.10</td><td>3,610.72</td><td>4,038.42</td>
+        <td><strong>29,120.64</strong></td>
       </tr>
       <tr>
         <td style="color:var(--danger)">(−) Total Operating Expenses</td>
-        <td>(515.59)</td><td>(638.51)</td><td>(820.83)</td><td>(577.85)</td><td>(634.35)</td><td>(667.15)</td>
-        <td><strong>(3,854.28)</strong></td>
+        <td>(515.59)</td><td>(638.51)</td><td>(820.83)</td><td>(577.85)</td><td>(634.35)</td><td>(667.15)</td><td>(647.01)</td>
+        <td><strong>(4,501.29)</strong></td>
       </tr>
       <tr style="font-weight:700;background:#e8f5e9">
         <td>Owner Net Profit</td>
-        <td>3,592.58</td><td>3,370.06</td><td>3,100.19</td><td>2,833.53</td><td>2,900.75</td><td>2,943.57</td>
-        <td><strong>18,740.68</strong></td>
+        <td>3,592.58</td><td>3,370.06</td><td>3,100.19</td><td>2,833.53</td><td>2,900.75</td><td>2,943.57</td><td>3,391.41</td>
+        <td><strong>22,132.09</strong></td>
       </tr>
-      <tr><td colspan="8" style="padding:3px;background:var(--border)"></td></tr>
-      <tr><td>MO Maintenance Fee</td><td>(243.20)</td><td>(121.60)</td><td>—</td><td>—</td><td>—</td><td>(121.60)</td><td><strong>(486.40)</strong></td></tr>
-      <tr><td>MO Sinking Fund</td><td>(24.32)</td><td>(12.16)</td><td>—</td><td>—</td><td>—</td><td>(12.16)</td><td><strong>(48.64)</strong></td></tr>
-      <tr><td>MO Assessment Fee</td><td>—</td><td>—</td><td>(11.78)</td><td>—</td><td>—</td><td>—</td><td><strong>(11.78)</strong></td></tr>
-      <tr><td>MO Quit Rent</td><td>—</td><td>—</td><td>(16.82)</td><td>—</td><td>—</td><td>—</td><td><strong>(16.82)</strong></td></tr>
-      <tr><td>IWK Sewerage Charges</td><td>—</td><td>—</td><td>—</td><td>(40.90)</td><td>—</td><td>(20.45)</td><td><strong>(61.35)</strong></td></tr>
-      <tr><td>MO Fire Insurance</td><td>—</td><td>—</td><td>—</td><td>—</td><td>(123.39)</td><td>—</td><td><strong>(123.39)</strong></td></tr>
+      <tr><td colspan="9" style="padding:3px;background:var(--border)"></td></tr>
+      <tr><td>MO Maintenance Fee</td><td>(243.20)</td><td>(121.60)</td><td>—</td><td>—</td><td>—</td><td>(121.60)</td><td>(121.60)</td><td><strong>(608.00)</strong></td></tr>
+      <tr><td>MO Sinking Fund</td><td>(24.32)</td><td>(12.16)</td><td>—</td><td>—</td><td>—</td><td>(12.16)</td><td>(12.16)</td><td><strong>(60.80)</strong></td></tr>
+      <tr><td>MO Assessment Fee</td><td>—</td><td>—</td><td>(11.78)</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>(11.78)</strong></td></tr>
+      <tr><td>MO Quit Rent</td><td>—</td><td>—</td><td>(16.82)</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>(16.82)</strong></td></tr>
+      <tr><td>IWK Sewerage Charges</td><td>—</td><td>—</td><td>—</td><td>(40.90)</td><td>—</td><td>(20.45)</td><td>—</td><td><strong>(61.35)</strong></td></tr>
+      <tr><td>MO Fire Insurance</td><td>—</td><td>—</td><td>—</td><td>—</td><td>(123.39)</td><td>—</td><td>—</td><td><strong>(123.39)</strong></td></tr>
       <tr class="row-total highlight">
         <td>🏁 Owner's Entitlement</td>
-        <td><strong>3,325.06</strong></td><td><strong>3,236.30</strong></td><td><strong>3,071.59</strong></td><td><strong>2,792.63</strong></td><td><strong>2,777.36</strong></td><td><strong>2,789.36</strong></td>
-        <td><strong>17,992.30</strong></td>
+        <td><strong>3,325.06</strong></td><td><strong>3,236.30</strong></td><td><strong>3,071.59</strong></td><td><strong>2,792.63</strong></td><td><strong>2,777.36</strong></td><td><strong>2,789.36</strong></td><td><strong>3,257.65</strong></td>
+        <td><strong>21,249.95</strong></td>
       </tr>
       <tr>
         <td>Profit Margin (Entitlement/Revenue)</td>
-        <td>59.0%</td><td>60.0%</td><td>58.4%</td><td>59.8%</td><td>57.6%</td><td>57.1%</td>
-        <td><strong>58.7%</strong></td>
+        <td>59.0%</td><td>60.0%</td><td>58.4%</td><td>59.8%</td><td>57.6%</td><td>57.1%</td><td>57.9%</td>
+        <td><strong>58.5%</strong></td>
       </tr>
     </tbody>
   </table>
@@ -482,35 +495,35 @@
   <table>
     <thead>
       <tr>
-        <th>Line Item</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th>
+        <th>Line Item</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th>
         <th>Total</th>
       </tr>
     </thead>
     <tbody>
       <tr style="font-weight:700;background:#e8f5e9">
         <td>Owner's Entitlement</td>
-        <td>3,325.06</td><td>3,236.30</td><td>3,071.59</td><td>2,792.63</td><td>2,777.36</td><td>2,789.36</td>
-        <td><strong>17,992.30</strong></td>
+        <td>3,325.06</td><td>3,236.30</td><td>3,071.59</td><td>2,792.63</td><td>2,777.36</td><td>2,789.36</td><td>3,257.65</td>
+        <td><strong>21,249.95</strong></td>
       </tr>
       <tr>
         <td style="color:var(--danger)">(−) Bank Loan Instalment</td>
-        <td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td>
-        <td><strong>(12,360.00)</strong></td>
+        <td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td><td>(2,060.00)</td>
+        <td><strong>(14,420.00)</strong></td>
       </tr>
       <tr class="row-total highlight">
         <td>💰 Net Entitlement After Loan</td>
-        <td><strong>1,265.06</strong></td><td><strong>1,176.30</strong></td><td><strong>1,011.59</strong></td><td><strong>732.63</strong></td><td><strong>717.36</strong></td><td><strong>729.36</strong></td>
-        <td><strong>5,632.30</strong></td>
+        <td><strong>1,265.06</strong></td><td><strong>1,176.30</strong></td><td><strong>1,011.59</strong></td><td><strong>732.63</strong></td><td><strong>717.36</strong></td><td><strong>729.36</strong></td><td><strong>1,197.65</strong></td>
+        <td><strong>6,829.95</strong></td>
       </tr>
       <tr>
         <td>Loan Coverage Ratio</td>
-        <td>1.61×</td><td>1.57×</td><td>1.49×</td><td>1.36×</td><td>1.35×</td><td>1.35×</td>
-        <td><strong>1.46×</strong></td>
+        <td>1.61×</td><td>1.57×</td><td>1.49×</td><td>1.36×</td><td>1.35×</td><td>1.35×</td><td>1.58×</td>
+        <td><strong>1.47×</strong></td>
       </tr>
     </tbody>
   </table>
   <p style="font-size:0.78rem;color:var(--text-light);margin-top:12px;text-align:center">
-    💡 <strong>Note:</strong> Loan coverage ratio = Owner's Entitlement ÷ Loan Instalment (RM 2,060). A ratio above 1.0× means the payout fully covers the monthly loan. The lowest coverage was in May (1.35×) but all months remained positive.
+    💡 <strong>Note:</strong> Loan coverage ratio = Owner's Entitlement ÷ Loan Instalment (RM 2,060). A ratio above 1.0× means the payout fully covers the monthly loan. The lowest coverage was in May (1.35×) but all months remained positive. July's coverage improved to 1.58×.
   </p>
 </div>
 
@@ -520,7 +533,7 @@
   <table>
     <thead>
       <tr>
-        <th>Metric</th><th>Jan → Feb</th><th>Feb → Mar</th><th>Mar → Apr</th><th>Apr → May</th><th>May → Jun</th>
+        <th>Metric</th><th>Jan → Feb</th><th>Feb → Mar</th><th>Mar → Apr</th><th>Apr → May</th><th>May → Jun</th><th>Jun → Jul</th>
       </tr>
     </thead>
     <tbody>
@@ -531,6 +544,7 @@
         <td class="trend-down">▼ RM 590.36 (−11.2%)</td>
         <td class="trend-up">▲ RM 151.32 (+3.2%)</td>
         <td class="trend-up">▲ RM 60.78 (+1.3%)</td>
+        <td class="trend-up">▲ RM 744.97 (+15.3%)</td>
       </tr>
       <tr>
         <td>Direct Expenses Change</td>
@@ -539,6 +553,7 @@
         <td class="trend-down">▲ RM 46.68 (+13.0%)</td>
         <td class="trend-up">▼ RM 3.33 (−0.8%)</td>
         <td class="trend-up">▼ RM 33.74 (−8.4%)</td>
+        <td class="trend-down">▲ RM 210.34 (+56.9%)</td>
       </tr>
       <tr>
         <td>OpEx Change</td>
@@ -547,6 +562,7 @@
         <td class="trend-up">▼ RM 242.98 (−29.6%)</td>
         <td class="trend-down">▲ RM 56.50 (+9.8%)</td>
         <td class="trend-down">▲ RM 32.80 (+5.2%)</td>
+        <td class="trend-up">▼ RM 20.14 (−3.0%)</td>
       </tr>
       <tr>
         <td>Net Profit Change</td>
@@ -555,14 +571,16 @@
         <td class="trend-down">▼ RM 266.66 (−8.6%)</td>
         <td class="trend-up">▲ RM 67.22 (+2.4%)</td>
         <td class="trend-up">▲ RM 42.82 (+1.5%)</td>
+        <td class="trend-up">▲ RM 447.84 (+15.2%)</td>
       </tr>
       <tr style="font-weight:700">
         <td>Entitlement Change</td>
         <td class="trend-down">▼ RM 88.76 (−2.7%)</td>
         <td class="trend-down">▼ RM 164.71 (−5.1%)</td>
         <td class="trend-down">▼ RM 278.96 (−9.1%)</td>
-        <td class="trend-up">▼ RM 15.27 (−0.5%)</td>
+        <td class="trend-down">▼ RM 15.27 (−0.5%)</td>
         <td class="trend-up">▲ RM 12.00 (+0.4%)</td>
+        <td class="trend-up">▲ RM 468.29 (+16.8%)</td>
       </tr>
     </tbody>
   </table>
@@ -575,27 +593,27 @@
     <tbody>
       <tr>
         <td style="width:40px;text-align:center;font-size:1.5rem;padding:12px">🏨</td>
-        <td style="padding:12px"><strong>H1 2026 Revenue: RM 30,672</strong> — averaged RM 5,112/month. Peak in Jan (RM 5,635), trough in Apr (RM 4,671). Jun recovered to RM 4,883, showing signs of stabilisation around the RM 4,800 level.</td>
+        <td style="padding:12px"><strong>Jan–Jul 2026 Revenue: RM 36,300</strong> — averaged RM 5,186/month. Peak months: Jan (RM 5,635) and Jul (RM 5,628). April was the trough (RM 4,671). July came back strongly, nearly matching January.</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-size:1.5rem;padding:12px">📈</td>
+        <td style="padding:12px"><strong>July was a standout month</strong> — occupancy hit 96.3% (highest this year), average room rate recovered to RM 189, and revenue jumped 15.3% vs June. The combination of high occupancy + better pricing pushed entitlement up 16.8% to RM 3,258.</td>
       </tr>
       <tr>
         <td style="text-align:center;font-size:1.5rem;padding:12px">📉</td>
-        <td style="padding:12px"><strong>Room rate erosion accelerated</strong> — down from RM 213 (Jan) to RM 179 (Jun), a 16% drop. However occupancy bounced back to 90.5% in June, suggesting the lower pricing is working to fill rooms. The tradeoff: more bookings at lower rates.</td>
+        <td style="padding:12px"><strong>Room rate volatility</strong> — dropped to RM 179 in June, then bounced back to RM 189 in July. This suggests demand remains price-sensitive, but pricing power is returning in peak periods.</td>
       </tr>
       <tr>
         <td style="text-align:center;font-size:1.5rem;padding:12px">🧹</td>
-        <td style="padding:12px"><strong>Room Cleaning still dominates OpEx</strong> at RM 2,703 (70.1% of all operating costs). With higher occupancy in June, cleaning costs rose moderately to RM 435 — in line with the trip volume increase.</td>
+        <td style="padding:12px"><strong>Room Cleaning still dominates OpEx</strong> at RM 3,142 YTD (69.8% of operating costs). July cleaning cost was RM 439, in line with the near-full occupancy.</td>
       </tr>
       <tr>
         <td style="text-align:center;font-size:1.5rem;padding:12px">⚡</td>
-        <td style="padding:12px"><strong>Electricity keeps climbing</strong> — now at RM 153.26 in June, the highest month so far. Summer heat driving AC usage. YTD total: RM 754.</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;font-size:1.5rem;padding:12px">💳</td>
-        <td style="padding:12px"><strong>Credit Card fee normalised</strong> — After the RM 267 anomaly in January, the rest of the year averaged just RM 2.59/month. The Jan spike remains unexplained.</td>
+        <td style="padding:12px"><strong>Electricity cooled slightly in July</strong> to RM 133.89 (from RM 153.26 in June), likely due to better occupancy spreading usage or slightly milder weather. YTD electricity total: RM 888.</td>
       </tr>
       <tr>
         <td style="text-align:center;font-size:1.5rem;padding:12px">🏦</td>
-        <td style="padding:12px"><strong>Profit margin remains healthy</strong> at 58.7% average. June dipped slightly to 57.1% — the lowest margin — due to rising electricity and MO charges eating into profit despite higher occupancy.</td>
+        <td style="padding:12px"><strong>Profit margin stable</strong> at 58.5% YTD. July margin was 57.9%. After loan instalments, net entitlement stands at RM 6,830 for 7 months (~RM 976/month average).</td>
       </tr>
     </tbody>
   </table>
@@ -603,7 +621,7 @@
 
 <!-- ============ FOOTER ============ -->
 <div class="footer">
-  Generated on 23 July 2026 &nbsp;·&nbsp; Source: Monthly Statements from Mana Mana (Statement Nos. 22 30010126 – 22 30010626) &nbsp;·&nbsp; All figures in Malaysian Ringgit (RM)
+  Generated on 22 August 2026 &nbsp;·&nbsp; Source: Monthly Statements from Mana Mana (Statement Nos. 22 30010126 – 22 30010726) &nbsp;·&nbsp; All figures in Malaysian Ringgit (RM)
 </div>
 
 </div>
@@ -618,7 +636,6 @@
   var btn   = document.getElementById('pw-btn');
   var err   = document.getElementById('pw-err');
 
-  // check sessionStorage (persists within same tab session)
   if (sessionStorage.getItem('_pw_ok') === '1') {
     gate.style.display = 'none';
     report.style.display = 'block';
@@ -642,7 +659,6 @@
     if (e.key === 'Enter') unlock();
   });
 
-  // focus input on load
   input.focus();
 })();
 </script>
