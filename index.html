@@ -705,8 +705,9 @@
     var cw = w - pad.left - pad.right, ch = h - pad.top - pad.bottom;
     var min = Math.min.apply(null, s.values), max = Math.max.apply(null, s.values);
     var range = max - min || 1;
-    // add 10% headroom
-    var yMax = max + range * 0.12, yMin = Math.max(0, min - range * 0.08);
+    // fixed scale for occupancy rate %
+    var yMax = s.unit === '%' ? 100 : max + range * 0.12;
+    var yMin = s.unit === '%' ? 10 : Math.max(0, min - range * 0.08);
     var yr = yMax - yMin || 1;
 
     function x(i){ return pad.left + (i * cw / (s.values.length - 1)); }
