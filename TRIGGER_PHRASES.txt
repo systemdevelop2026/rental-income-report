@@ -1,0 +1,22 @@
+=== How to Update the Rental Income Report ===
+
+When new monthly financial statement PDFs arrive in this folder,
+just tell QClaw any of these:
+
+  "update report"
+  "new monthly reports are in the mana mana folder"
+  "update the rental income report"
+
+QClaw will automatically:
+  1. Detect the new PDF(s) in this folder
+  2. Extract the financial data
+  3. Regenerate index.html
+  4. Commit + push to GitHub
+
+Password:     22mac
+
+GitHub Pages: https://systemdevelop2026.github.io/rental-income-report/
+Git Repo:     https://github.com/systemdevelop2026/rental-income-report
+
+---
+Last updated: 25 July 2026

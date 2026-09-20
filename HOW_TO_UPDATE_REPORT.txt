@@ -15,12 +15,40 @@ QClaw will automatically:
 1. Scan this folder for new PDFs
 2. Extract all financial data from each statement
 3. Update tables, charts, KPIs, and insights in the HTML report
-4. Rename the file if the date range has changed
+4. Save as `index.html` (for GitHub Pages)
+
+## PDF Naming Convention
+When a statement PDF arrives, rename it before processing:
+
+```
+01_22mac_financial_report_january.pdf
+02_22mac_financial_report_february.pdf
+03_22mac_financial_report_march.pdf
+04_22mac_financial_report_april.pdf
+05_22mac_financial_report_may.pdf
+06_22mac_financial_report_june.pdf
+07_22mac_financial_report_july.pdf
+```
+
+Pattern: `MM_22mac_financial_report_<month>.pdf`
+(MM = zero-padded month 01-12, month = lowercase English name)
+
+Original Mana Mana names (`22 3001MM26.pdf` or `6X_22 3001MM26_..._XXXXX.pdf`)
+are renamed to this convention. Every rename is logged to `PDF_RENAME_LOG.txt`
+with rollback commands.
+
+PDFs are gitignored (`*.pdf`), so renaming them never affects the git repo.
 
 ## Output File
-`Rental_Income_Report_Jan-May_2026.html`
-(renamed accordingly when new months are added)
+`index.html`
+(always named index.html for GitHub Pages compatibility)
+
+## Git Repo
+https://github.com/systemdevelop2026/rental-income-report
+
+To push after update, tell QClaw:
+> "push to github"
 
 ---
 
-Last updated: 11 July 2026
+Last updated: 20 September 2026
