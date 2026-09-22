@@ -198,8 +198,18 @@ git log origin/main..HEAD --oneline  # must print nothing
 
 > If `git push` blocks on an interactive GitHub login (Git Credential Manager), surface it
 > to the user: they must sign in once in the browser window that GCM opens; the push then
-> completes automatically. This machine stores no GitHub credential, so the first push of
-> a session may require that one-time sign-in.
+> completes automatically.
+>
+> **This machine is already configured for unattended pushes** (as of 2026-09-22):
+> `~/.gitconfig` sets `credential.helper` to the QClaw-bundled Git Credential Manager via
+> its short path `C:/PROGRA~1/QClaw/v0.2.37.630/resources/git/mingw64/bin/git-credential-manager.exe`,
+> preceded by an empty `helper =` to clear the QClaw system-config `helper-selector` entry
+> (which otherwise pops the "Select a credential helper" dialog on every push). A GitHub
+> credential for user `systemdevelop2026` is stored in Windows Credential Manager
+> (`cmdkey target=git:https://github.com`), and `git credential fill` returns it
+> non-interactively. So `git push origin main` should now complete with no dialog.
+> Do NOT re-add `credential.helper = manager` — the bare `manager` name resolves to the
+> QClaw helper-selector, and paths containing spaces break the shell form.
 
 ## Data reference — processed months (Jan–Aug 2026)
 
