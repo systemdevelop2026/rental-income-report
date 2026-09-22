@@ -8,6 +8,9 @@ RENAMED "6X_22 30010526_251215_9IKV9.pdf" -> "05_22mac_financial_report_may.pdf"
 RENAMED "6X_22 30010626_251215_GXYRX.pdf" -> "06_22mac_financial_report_june.pdf"
 RENAMED "6X_22 30010726_251215_KRX5E.pdf" -> "07_22mac_financial_report_july.pdf"
 
+# PDF rename log - 2026-09-22 (August 2026 report)
+RENAMED "6X_22M30010826_251215_VIYXY.pdf" -> "08_22mac_financial_report_august.pdf"
+
 # Rollback (run in this folder):
 Rename-Item -LiteralPath '01_22mac_financial_report_january.pdf' -NewName '22 30010126.pdf'
 Rename-Item -LiteralPath '02_22mac_financial_report_february.pdf' -NewName '6X_22 30010226_251215_KOKVX.pdf'
@@ -16,3 +19,4 @@ Rename-Item -LiteralPath '04_22mac_financial_report_april.pdf' -NewName '6X_22 3
 Rename-Item -LiteralPath '05_22mac_financial_report_may.pdf' -NewName '6X_22 30010526_251215_9IKV9.pdf'
 Rename-Item -LiteralPath '06_22mac_financial_report_june.pdf' -NewName '6X_22 30010626_251215_GXYRX.pdf'
 Rename-Item -LiteralPath '07_22mac_financial_report_july.pdf' -NewName '6X_22 30010726_251215_KRX5E.pdf'
+Rename-Item -LiteralPath '08_22mac_financial_report_august.pdf' -NewName '6X_22M30010826_251215_VIYXY.pdf'

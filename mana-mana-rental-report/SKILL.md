@@ -175,50 +175,70 @@ chart a 140–220 axis; scale each accordingly.
 > The Revenue & Profit Trend section is a **table** (one row per month), not a bar
 > chart — despite the `.bar` CSS still existing for the occupancy/room-rate charts.
 
-### Step 6 — Verify, then publish
+### Step 6 — Verify, then publish (commit + push)
 
-1. Open `index.html` (or re-read it) and confirm the new column/bars render and totals add up.
-2. Commit and push when the user asks ("push to github"):
+1. Open `index.html` (or re-read it) and confirm the new column/bars render and totals add up
+   (column totals vs KPI cards, `Gross 80% − OpEx = Owner Net Profit`, `Loan = RM 2,060 × months`).
+2. Commit and push as the **final step of every update**. Pushing to GitHub is part of the
+   standard update workflow — do it automatically, do not wait for a separate request:
 
 ```powershell
 Set-Location 'C:\Users\PC\Desktop\mana mana report\mana mana'
 git add -A
 git commit -m "Add <Month> 2026 monthly report"
-git push
+git push origin main
 ```
 
-## Data reference — processed months (Jan–Jul 2026)
+3. Confirm the push landed (remote HEAD must equal local HEAD, no unpushed commits):
 
-| Field | Jan | Feb | Mar | Apr | May | Jun | Jul |
-|-------|-----|-----|-----|-----|-----|-----|-----|
-| Short Term Rental | 5,635.34 | 5,397.84 | 5,261.58 | 4,671.22 | 4,822.54 | 4,883.32 | 5,628.29 |
-| Credit Card/E-Payment | 266.80 | 1.72 | 3.37 | 3.65 | 3.02 | 1.67 | 3.86 |
-| Commission | 233.32 | 385.42 | 356.94 | 403.34 | 400.64 | 368.25 | 576.40 |
-| Total Direct Expenses | 500.12 | 387.14 | 360.31 | 406.99 | 403.66 | 369.92 | 580.26 |
-| Collected Revenue (100%) | 5,135.22 | 5,010.70 | 4,901.27 | 4,264.23 | 4,418.88 | 4,513.40 | 5,048.03 |
-| Gross Revenue (80%) | 4,108.18 | 4,008.56 | 3,921.02 | 3,411.38 | 3,535.10 | 3,610.72 | 4,038.42 |
-| Electricity | 73.80 | 108.71 | 148.59 | 131.49 | 137.97 | 153.26 | 133.89 |
-| Water | 29.58 | 31.51 | 37.86 | 20.32 | 31.74 | 31.59 | 27.19 |
-| Internet | 0.00 | 0.00 | 0.00 | 0.00 | 0.48 | 0.00 | 0.00 |
-| Repair & Maintenance | 0.00 | 0.00 | 1.42 | 0.55 | 4.36 | 4.29 | 1.57 |
-| Room Cleaning | 368.91 | 453.29 | 602.96 | 425.49 | 417.45 | 434.52 | 439.36 |
-| Room's Amenities | 43.30 | 45.00 | 30.00 | 0.00 | 42.35 | 43.49 | 45.00 |
-| Total Operating Expenses | 515.59 | 638.51 | 820.83 | 577.85 | 634.35 | 667.15 | 647.01 |
-| Owner Net Profit | 3,592.58 | 3,370.06 | 3,100.19 | 2,833.53 | 2,900.75 | 2,943.57 | 3,391.41 |
-| MO Maintenance Fee | 243.20 | 121.60 | — | — | — | 121.60 | 121.60 |
-| MO Sinking Fund | 24.32 | 12.16 | — | — | — | 12.16 | 12.16 |
-| MO Assessment Fee | — | — | 11.78 | — | — | — | — |
-| MO Quit Rent | — | — | 16.82 | — | — | — | — |
-| IWK Sewerage | — | — | — | 40.90 | — | 20.45 | — |
-| MO Fire Insurance | — | — | — | — | 123.39 | — | — |
-| Owner's Entitlement | 3,325.06 | 3,236.30 | 3,071.59 | 2,792.63 | 2,777.36 | 2,789.36 | 3,257.65 |
-| Occupancy Rate | 82.1% | 93.0% | 80.8% | 80.8% | 80.8% | 90.5% | 96.3% |
-| Avg Room Rate | 212.59 | 207.27 | 210.05 | 192.73 | 192.25 | 178.71 | 188.53 |
-| Hosted Trips | 891 | 1,064 | 1,027 | 921 | 952 | 1,023 | 1,015 |
+```powershell
+git ls-remote origin main          # compare with: git rev-parse HEAD
+git log origin/main..HEAD --oneline  # must print nothing
+```
 
-YTD (Jan–Jul 2026): collected revenue RM 36,300.13 · collected 100% RM 33,291.73 ·
-gross 80% RM 29,120.64 · OpEx RM 4,501.29 · owner net profit RM 22,132.09 ·
-owner's entitlement RM 21,249.95 · net after loan RM 6,829.95 · margin 58.5%.
+> If `git push` blocks on an interactive GitHub login (Git Credential Manager), surface it
+> to the user: they must sign in once in the browser window that GCM opens; the push then
+> completes automatically. This machine stores no GitHub credential, so the first push of
+> a session may require that one-time sign-in.
+
+## Data reference — processed months (Jan–Aug 2026)
+
+| Field | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug |
+|-------|-----|-----|-----|-----|-----|-----|-----|-----|
+| Short Term Rental | 5,635.34 | 5,397.84 | 5,261.58 | 4,671.22 | 4,822.54 | 4,883.32 | 5,628.29 | 5,824.60 |
+| Credit Card/E-Payment | 266.80 | 1.72 | 3.37 | 3.65 | 3.02 | 1.67 | 3.86 | 3.95 |
+| Commission | 233.32 | 385.42 | 356.94 | 403.34 | 400.64 | 368.25 | 576.40 | 627.15 |
+| Total Direct Expenses | 500.12 | 387.14 | 360.31 | 406.99 | 403.66 | 369.92 | 580.26 | 631.10 |
+| Collected Revenue (100%) | 5,135.22 | 5,010.70 | 4,901.27 | 4,264.23 | 4,418.88 | 4,513.40 | 5,048.03 | 5,193.50 |
+| Gross Revenue (80%) | 4,108.18 | 4,008.56 | 3,921.02 | 3,411.38 | 3,535.10 | 3,610.72 | 4,038.42 | 4,154.80 |
+| Electricity | 73.80 | 108.71 | 148.59 | 131.49 | 137.97 | 153.26 | 133.89 | 126.41 |
+| Water | 29.58 | 31.51 | 37.86 | 20.32 | 31.74 | 31.59 | 27.19 | 0.00 |
+| Internet | 0.00 | 0.00 | 0.00 | 0.00 | 0.48 | 0.00 | 0.00 | 0.00 |
+| Repair & Maintenance | 0.00 | 0.00 | 1.42 | 0.55 | 4.36 | 4.29 | 1.57 | 4.00 |
+| Room Cleaning | 368.91 | 453.29 | 602.96 | 425.49 | 417.45 | 434.52 | 439.36 | 437.87 |
+| Room's Amenities | 43.30 | 45.00 | 30.00 | 0.00 | 42.35 | 43.49 | 45.00 | 41.17 |
+| Total Operating Expenses | 515.59 | 638.51 | 820.83 | 577.85 | 634.35 | 667.15 | 647.01 | 609.45 |
+| Owner Net Profit | 3,592.58 | 3,370.06 | 3,100.19 | 2,833.53 | 2,900.75 | 2,943.57 | 3,391.41 | 3,545.35 |
+| MO Maintenance Fee | 243.20 | 121.60 | — | — | — | 121.60 | 121.60 | 121.60 |
+| MO Sinking Fund | 24.32 | 12.16 | — | — | — | 12.16 | 12.16 | 12.16 |
+| MO Assessment Fee | — | — | 11.78 | — | — | — | — | — |
+| MO Quit Rent | — | — | 16.82 | — | — | — | — | — |
+| IWK Sewerage | — | — | — | 40.90 | — | 20.45 | — | — |
+| MO Fire Insurance | — | — | — | — | 123.39 | — | — | — |
+| Owner's Entitlement | 3,325.06 | 3,236.30 | 3,071.59 | 2,792.63 | 2,777.36 | 2,789.36 | 3,257.65 | 3,411.59 |
+| Occupancy Rate | 82.1% | 93.0% | 80.8% | 80.8% | 80.8% | 90.5% | 96.3% | 93.6% |
+| Avg Room Rate | 212.59 | 207.27 | 210.05 | 192.73 | 192.25 | 178.71 | 188.53 | 200.64 |
+| Hosted Trips | 891 | 1,064 | 1,027 | 921 | 952 | 1,023 | 1,015 | 987 |
+
+YTD (Jan–Aug 2026): collected revenue RM 42,124.73 · collected 100% RM 38,485.23 ·
+gross 80% RM 30,788.18 · OpEx RM 5,110.74 · owner net profit RM 25,677.44 ·
+owner's entitlement RM 24,661.54 · net after loan RM 8,181.54 · margin 58.5%.
+
+> Note: the report's "Gross Revenue (80%)" columns are `collected revenue (100%) × 0.8`.
+> The column total must therefore equal `0.8 × 38,485.23 = 30,788.18` and
+> `Gross 80% − OpEx = Owner Net Profit` must hold. (The pre-Aug 2026 report had a
+> stale gross-80% total of 29,120.64 that did not reconcile; it was corrected to
+> 30,788.18 during the August update.)
 
 Fixed monthly bank loan instalment: **RM 2,060.00**.
 
